@@ -191,8 +191,8 @@ __STATIC_INLINE void nrf_delay_us(uint32_t volatile number_of_us)
 
 #elif defined ( __GNUC__ )
 
-static __INLINE void nrf_delay_us(uint32_t volatile number_of_us) __attribute__((always_inline));
-static __INLINE void nrf_delay_us(uint32_t volatile number_of_us)
+static __INLINE void nrf_delay_us(uint32_t number_of_us) __attribute__((always_inline));
+static __INLINE void nrf_delay_us(uint32_t number_of_us)
 {
 register uint32_t delay __ASM ("r0") = number_of_us;
 __ASM volatile (
@@ -269,6 +269,6 @@ __ASM volatile (
 }
 #endif
 
-void nrf_delay_ms(uint32_t volatile number_of_ms);
+void nrf_delay_ms(uint32_t number_of_ms);
 
 #endif
