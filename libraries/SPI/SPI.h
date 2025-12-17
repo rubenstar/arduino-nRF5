@@ -146,14 +146,14 @@ extern SPIClass SPI1;
 // For compatibility with sketches designed for AVR @ 16 MHz
 // New programs should use SPI.beginTransaction to set the SPI clock
 #ifdef F_CPU
-#define DIVISOR F_CPU / 16000000
-#define SPI_CLOCK_DIV2   2 * DIVISOR
-#define SPI_CLOCK_DIV4   4 * DIVISOR
-#define SPI_CLOCK_DIV8   8 * DIVISOR
-#define SPI_CLOCK_DIV16  16 * DIVISOR
-#define SPI_CLOCK_DIV32  32 * DIVISOR
-#define SPI_CLOCK_DIV64  64 * DIVISOR
-#define SPI_CLOCK_DIV128 128 * DIVISOR
+#define DIVISOR (F_CPU / 16000000UL)
+#define SPI_CLOCK_DIV2   (2 * DIVISOR)
+#define SPI_CLOCK_DIV4   (4 * DIVISOR)
+#define SPI_CLOCK_DIV8   (8 * DIVISOR)
+#define SPI_CLOCK_DIV16  (16 * DIVISOR)
+#define SPI_CLOCK_DIV32  (32 * DIVISOR)
+#define SPI_CLOCK_DIV64  (64 * DIVISOR)
+#define SPI_CLOCK_DIV128 (128 * DIVISOR)
 #endif
 
 #endif
