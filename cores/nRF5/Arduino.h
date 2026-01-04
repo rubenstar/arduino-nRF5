@@ -68,6 +68,12 @@ void loop( void ) ;
 #include "wiring_shift.h"
 #include "WInterrupts.h"
 
+// My own inclusions
+#include "FreeRTOS.h"
+#include "semphr.h"
+#include "timers.h"
+#include "common_inc.h"
+
 // undefine stdlib's abs if encountered
 #ifdef abs
 #undef abs
