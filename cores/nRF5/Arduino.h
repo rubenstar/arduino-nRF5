@@ -73,6 +73,8 @@ void loop( void ) ;
 #include "semphr.h"
 #include "timers.h"
 #include "common_inc.h"
+#include "rtos.h"
+#include "AdaCallback.h"
 
 // undefine stdlib's abs if encountered
 #ifdef abs

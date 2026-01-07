@@ -114,6 +114,23 @@ int digitalRead( uint32_t ulPin )
   return ((port->IN >> pin) & 1UL) ? HIGH : LOW ;
 }
 
+void digitalToggle( uint32_t pin )
+{
+  int state = 1 - digitalRead(pin);
+  digitalWrite(pin, state);
+}
+
+void ledOn(uint32_t pin)
+{
+  digitalWrite(pin, LED_STATE_ON);
+}
+
+void ledOff(uint32_t pin)
+{
+  digitalWrite(pin, 1-LED_STATE_ON);
+}
+
+
 #ifdef __cplusplus
 }
 #endif
